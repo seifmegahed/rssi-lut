@@ -21,7 +21,7 @@ const signalQuality = (dbm, worst = -85, best = -30) =>
   );
 
 let tsFileContent = "export const rssiLUT = new Map([\n";
-let csvFileContent = `dbm${delimiter} rssi\n`;
+let csvFileContent = `RSSI${delimiter} Q\n`;
 
 for (let i = -20; i >= -100; i--) {
   const rssi = Math.max(Math.min(signalQuality(i), 100), 0);
